@@ -1,0 +1,31 @@
+body{background-color: rgb(228, 250, 238)}
+.container{width: 100%;}
+nav.navbar{font-size: 20px;background-color: rgb(77, 144, 155) ;color: white;}
+a.nav-link{margin:15px ;}
+.card-header{background-color:rgb(77, 144, 155);}
+.card-body{background-color: rgb(248, 247, 247);}
+.card a{list-style-type: none;text-decoration: none;color: rgb(252, 253, 252);}
+.card a:hover{color: rgb(216, 218, 216);}
+.side-menu{width: 100%;background-color: rgb(126, 83, 19);}
+ul#brands li ,ul#brands li a{text-decoration: none;list-style-type: none;color: rgb(71, 122, 189);}
+ul#brands li a:hover{color: rgb(40, 40, 179);}
+.carousel-item img{width: 100%;height: 290px;margin-left:0}
+.card-horizontal img{width: 320px;height: 240px;}
+.card-horizontal{display: flex;flex: 1 1 auto;color: black;}
+.banner{background-image: url('../img/banner2.jpg');height: fit-content;background-repeat: no-repeat;background-position: center;background-size: cover;width: 100%;}
+.banner2{background-image: url('../img/943508.jpg');height: 100%;background-repeat: no-repeat;background-position: center;background-size: cover;}
+body,html{height: 100%;margin: 0;width: 100%;}
+.text{width: 900px;height: 200px;color: rgb(19, 18, 18);position:relative;margin: auto;}
+.jumbotron{background-color: transparent;}
+ul#brands li img{width: 5rem;height: 3rem;size: 100%;}
+.text2{width: auto;height: auto;color:rgb(250, 250, 250);position: relative;margin-left: 0;}
+.contact{text-align: center;background-color:rgb(77, 144, 155);margin: 10px;}
+.contact a{color:rgb(228, 228, 230) ;font-size: small;}
+.contact a:hover{list-style-type: none;text-decoration: none;}
+.swiper-slide img{width: 100%;height: 250px;}
+label.error{color: red}
+li.col-sm-3, li.col-sm-3 a:hover,.news a:hover{list-style-type: none;text-decoration: none;}
+.hotsale{margin:15px}
+.news img{width: 200px;height:190px}
+
+

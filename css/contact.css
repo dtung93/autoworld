@@ -1,0 +1,4 @@
+.contact{text-align: center;background-color:rgb(77, 144, 155);margin: 10px;}
+.contact a{color:rgb(228, 228, 230) ;font-size: small;}
+.contact a:hover{list-style-type: none;text-decoration: none;}
+label.error{color: red}

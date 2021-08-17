@@ -1,0 +1,5 @@
+.side-menu{width: 100%;background-color: rgb(128, 167, 173);color: rgb(240, 239, 239);margin:auto}
+ul#brands li ,ul#brands li a{text-decoration: none;list-style-type: none;color: rgb(71, 122, 189);}
+ul#brands li a:hover{color: rgb(40, 40, 179);}
+nav.navbar{font-size: 20px;background-color: rgb(77, 144, 155) ;color: rgb(235, 233, 233);}
+a.nav-link{margin: 15px;px;}

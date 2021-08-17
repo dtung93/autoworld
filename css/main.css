@@ -1,0 +1,4 @@
+.hinh{background-image: url('../img/banner2.jpg');height: 100%;background-repeat: no-repeat;background-position: center;background-size: cover;}
+body,html{height: 100%;margin: 0;width: 100%;}
+.text{width: auto;height: auto;color: white;position: absolute;margin-top: 100px;margin-left: 150px;}
+.jumbotron{background-color: transparent;}
