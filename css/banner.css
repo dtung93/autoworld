@@ -1,2 +1,3 @@
-.banner{background-image: url('../img/news.jpg');height: fit-content;background-repeat: no-repeat;background-position: center;background-size: cover;width: 100%;}
+.banner{background-image: url('../img/news.jpg');height: fit-content;background-repeat: no-repeat;background-position: center;background-size: cover;width: auto;}
 .banner2{background-image: url('../img/Chevrolet-Colorado-2021-1-8356-1592732996.jpg');height: 100%;background-repeat: no-repeat;background-position: center;background-size: cover;color: white;}
+.jumbotron-banner{color: white;}

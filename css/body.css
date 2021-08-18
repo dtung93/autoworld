@@ -1,7 +1,8 @@
 body{background-color: rgb(228, 250, 238)}
 body,html{height: 100%;margin: 0;width: 100%}
 .container{width: 100%;}
-.text{width: 900px;height: 200px;color: rgb(19, 18, 18);position:relative;margin: auto;}
+.text{width: 700px;height: 200px;color: rgb(19, 18, 18);position:relative;margin: auto;}
 .jumbotron{background-color: transparent;color: rgb(19, 18, 18);font-weight: lighter;}
-.text2{width: auto;height: auto;color:rgb(250, 250, 250);position: relative;margin-left: 0;}
+.text2{width: 100%;height: auto;color:rgb(250, 250, 250);position: relative;margin-left: 0;}
 li.col-sm-3, li.col-sm-3 a:hover,.news a:hover{list-style-type: none;text-decoration: none;}
+

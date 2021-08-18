@@ -1,4 +1,4 @@
-.products img{width: 200px;}
+.products img{width: 100%;}
 .products div{display: inline-block; width: 200px;height: 200px;margin: 15px;padding: 10px;}
-.products{margin-left: 50px;}
+.products{margin-left: 20px;}
 .finance img{width: 6rem;height:3.5rem}
