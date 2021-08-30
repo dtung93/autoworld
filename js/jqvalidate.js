@@ -36,3 +36,35 @@ function VAL(){
     
     
     }
+    function LOGIN(){
+
+        $('#login').validate({
+        rules:{
+        name:{
+        required:true,
+        minlength:6
+        
+        },psw:{
+            required:true,
+            minlength:6
+        }
+        
+        
+        },messages:{
+        name:{
+        required:'Enter your username',
+        minlength:'Minimum 6 characters'
+        },psw:{
+        required:'Enter your password',
+        minlength:'Minimum 6 characters'
+        
+        }
+        
+        
+        }
+        
+        
+        });
+        
+        
+        }   

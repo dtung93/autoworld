@@ -38,6 +38,7 @@ function Compare(id){
    dataType:'json',
    success:function(s){
    console.log(s)
+   alert('Added'+id+'to compare')
    let 
    t='<div style="width:25%;">'
    t+='<h3>'+s.name+'</h3>'
@@ -68,3 +69,6 @@ function Delete(){
 $('.compare').html('')
 
 }   
+totalCart()
+showCart()
+  
