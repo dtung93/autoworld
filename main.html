@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome to Auto World!</title>
 
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,6 +13,7 @@
 <link  rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel='stylesheet' href='css/product.css'>
 <link rel='stylesheet' href='css/contact.css'>
@@ -66,19 +67,25 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html">Inventory</a>
+                    </li>
                 </ul>
                
                
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id='search'>
                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
                   </form>
+                
            </div>
+          
+        <li class="nav-item"><a href='cart.html'>
+            <i class="fa fa-shopping-cart"aria-hidden="true" id='cart'><span class='cart'>0</span></a></i>
+        </li>
     
         </nav>
-    
-    
-    
+   
     
     
         <div class="banner2">
@@ -116,10 +123,8 @@
                       <div class="swiper-slide"><a href=''><img src='img/2021-toyota-land-cruiser-mmp-1-1596116800.jpg'></a></div>
                       <div class="swiper-slide"><a href=''><img src='img/2022-lamborghini-aventador-109-1625607587.jpg'></a></div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
-                  </div>           
+                         </div>
        <div class="row">
     <div class="col-sm-2">
     <div class="side-menu">
@@ -326,7 +331,7 @@
             <div class="swiper-slide"><img src='img/2021-ford-explorer-timberline-104-1620059696_egpl.jpeg'></div>
             <div class="swiper-slide"><img src='img/2022-lamborghini-aventador-109-1625607587.jpg'></div>
         </div>
-        <div class="swiper-pagination"></div>
+
       </div>
     <br>
       <button class='btn btn-info btn-lg' style="height: 5rem;width: 100%;" data-target="#contactform" data-toggle="modal">Chat With Us Now</button>
@@ -491,10 +496,9 @@
             </div>
         </div>
         </div></a></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
+        </div>
+     
       </div>
     <hr>
     <div class="footer">
@@ -564,4 +568,5 @@
 </body>
 <script type='text/javascript' src='js/jqvalidate.js'></script>
 <script type='text/javascript' src='js/swiper.js'></script>
+<script type='text/javascript' src='js/cart.js'></script>
 </html>

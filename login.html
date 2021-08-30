@@ -10,10 +10,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src='js/jquery.validate.js'></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>   
+<script src='js/jquery.accrue.min.js'></script>
 <link  rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' href='css/product.css'>
 <link rel='stylesheet' href='css/contact.css'>
 <link rel='stylesheet' href='css/menu.css'>
@@ -21,11 +23,10 @@
 <link rel='stylesheet' href='css/banner.css'>
 <link rel='stylesheet' href='css/body.css'>
 <body>
-    <div class="toast fixed-top">
-        <div class="toast-body bg-primary text-white" style="font-size: 20px;">
-          Product successfully added to cart!
-        </div>
-     </div>
+    <div class="row" style="color: rgb(248, 239, 228);text-align: center;margin: auto;background-image: url('img/grass.jpg');height: 70px;background-repeat: no-repeat;background-size: cover;">
+    <marquee ><h1>Xuan Tung Auto World</h1></marquee>
+    
+    </div>
     
     <div class="row">
     
@@ -46,15 +47,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">Products</a>
                     </li>
-              
+               
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dealerships</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Ho Chi Minh </a>
-                            <a class="dropdown-item" href="#">Hanoi</a>
-                            <a class="dropdown-item" href="#">Da Nang</a>
-                            <a class="dropdown-item" href="#">Can Tho</a>
-                            <a class="dropdown-item" href="#">Hai Phong</a>
+                            <a class="dropdown-item" href="hcm.html">Ho Chi Minh </a>
+                            <a class="dropdown-item" href="hanoi.html">Hanoi</a>
+                            <a class="dropdown-item" href="danang.html">Da Nang</a>
+                            <a class="dropdown-item" href="cantho.html">Can Tho</a>
+                            <a class="dropdown-item" href="hanoi.html">Hai Phong</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -68,7 +69,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">Login</a>
-                    </li>
+                    </li> 
                     <li class="nav-item">
                         <a class="nav-link" href="inventory.html">Inventory</a>
                     </li>
@@ -77,6 +78,7 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id='search'>
                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
                   </form>
+                 
             </div>
             <li class="nav-item"><a href='cart.html'>
                 <i class="fa fa-shopping-cart"aria-hidden="true" id='cart'><span class='cart'>0</span></a></i>
@@ -98,7 +100,7 @@
                 <div class="swiper-slide"><a href=''><img src='img/2021-toyota-land-cruiser-mmp-1-1596116800.jpg'></a></div>
                 <div class="swiper-slide"><a href=''><img src='img/2022-lamborghini-aventador-109-1625607587.jpg'></a></div>
             </div>
-          
+           
           </div>           
     
     
@@ -200,46 +202,19 @@
     </div>
     <div class="col-sm-7">
     <div class="container" style="background-color: rgb(228, 235, 231);">
-        <h3 style="background-color: rgb(77,144,155);color: white;text-align: center;">Shop by brand</h3>
-    <ul id='brands'>
-        <div class="row">
-    
-        <li class='col-sm-3'><a href='bmw.html'><img src='img/bmwlogo.png'></a></li>
-        <li class='col-sm-3'><a href='chevrolet.html'><img src='img/chev.png'></a></li>
-        <li class='col-sm-3'><a href='ford.html'><img src='img/fordlogo.png'></a></li>
-        <li class='col-sm-3'><a href='gmc.html'><img src='img/gmclogo.png'></a></li>
-        </div>
-        <div class="row">
-        <li class='col-sm-3'><a href='honda.html'><img src='img/hondalogo.png'></a></li>
-        <li class='col-sm-3'><a href='mitsubishi.html'><img src='img/mitsubishilogo.png'></a></li>
-        <li class='col-sm-3'><a href='benz.html'><img src='img/benzlogo.png'></a></li>
-        <li class='col-sm-3'><a href='toyota.html'><img src='img/toyotalogo.png'></a></li>
-        </div>
-        <div class="row">
-        <li class='col-sm-3'><a href='vols.html'><img src='img/volskwagenlogo.png'></a></li>
-        <li class='col-sm-3'><a href='hyundai.html'><img src='img/hyundai.png'></a></li>
-        <li class='col-sm-3'><a href='kia.html'><img src='img/kia.png'></a></li>
-        <li class='col-sm-3'><a href='mazda.html'><img src='img/mazda.png'></a></li>
-        </div>
-    </ul>
-    <h3 style="background-color: rgb(77,144,155);color: white;text-align: center;">Shop by price</h3>
-    <div class="row" style="margin:10px;">
-   
-    <li class="col-sm-3 rounded-pill bg-info text-white" ><a href='product200.html' style="text-decoration: none;color: white;font-size: 20px;">Less than 200</a></li>
-    <li class="col-sm-3 rounded-pill bg-info text-white" ><a href='product200500.html' style="text-decoration: none;color: white;font-size: 20px;">201---500</a></li>
-    <li class="col-sm-3 rounded-pill bg-info text-white" ><a href='product500900.html' style="text-decoration: none;color: white;font-size: 20px;">501-900</li>
-    <li class="col-sm-3 rounded-pill bg-info text-white" ><a href='productmore900.html' style="text-decoration: none;color: white;font-size: 20px;">More than 901</a></li>
-    </div>
-   </div>
+<form id="login">
+<h3> Login</h3><br>
+<input type='text' name='name' id='name' placeholder='Username or Email Address'><br>
+<input type='password' name='psw'  id='psw' placeholder="Password"><br>
+<input type='checkbox'>&nbsp;Remember Me<br><br>
+<input type='submit' value='Sign In'class='btn btn-primary' onclick="LOGIN()">
+<input type='reset' class='btn btn-danger' value='Reset'>
+
+</form>
+</div>
 
 
-
- <div class="products">
-
-<h3>Ha Noi</h3>
-
-
- </div>
+ 
     </div>
     <div class="col-sm-3">
         <div class="carousel-right">
@@ -291,7 +266,7 @@
             <div class="swiper-slide"><img src='img/2021-ford-explorer-timberline-104-1620059696_egpl.jpeg'></div>
             <div class="swiper-slide"><img src='img/2022-lamborghini-aventador-109-1625607587.jpg'></div>
         </div>
-        
+  
       </div>
     <br>
       <button class='btn btn-info btn-lg btn-outline-light' style="height: 5rem;width: 100%;" data-target="#contactform" data-toggle="modal">Chat With Us Now</button>
@@ -459,7 +434,7 @@
         </div>
         </div></a></div>
         </div>
-      
+        
       </div>
     <hr>
     <div class="footer">
@@ -468,30 +443,30 @@
     <div class="col-sm-3">
         <div class="jumbotron">
         <h3 class="display-4">Award-Winning </h3>
-        <p class="lead">Jumbo helper text</p>
+        <p class="lead">Lorem ipsum dolor sit amet.</p>
         <hr class="my-2">
-        <p>More info</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis!</p>
      
     </div></div>
     <div class="col-sm-3"><div class="jumbotron">
         <h3 class="display-4">Endorsement of Excellency</h3>
-        <p class="lead">Jumbo helper text</p>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, facilis?</p>
         <hr class="my-2">
-        <p>More info</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam porro itaque molestiae! Veniam, eius.</p>
     
     </div></div>
     <div class="col-sm-3"><div class="jumbotron">
         <h3 class="display-4">We Listen</h3>
-        <p class="lead">Jumbo helper text</p>
+        <p class="lead">Lorem, ipsum.</p>
         <hr class="my-2">
-        <p>More info</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
      
     </div></div>
     <div class="col-sm-3"><div class="jumbotron">
         <h3 class="display-4">We Value You</h3>
-        <p class="lead">Jumbo helper text</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A odit animi voluptates nihil eius repellendus!</p>
         <hr class="my-2">
-        <p>More info</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa enim, quae adipisci molestias dolor eius tempore impedit maiores asperiores sit?</p>
       
     </div></div>
     
@@ -511,7 +486,7 @@
     <a href="">Best-Sellers</a><br>
     </div>
     <div class="col-sm-4">
-    <a href="finance.html">Vehicle Financing</a><br>
+    <a href="">Vehicle Financing</a><br>
     <a href="">Vehicle Servicing & Maintenance</a><br>
     <a href="">Sell or Trade a Vehicle</a><br>
     <a href="">Got A Question?</a><br>
@@ -532,7 +507,7 @@
                      </button>
              </div>
              <div class="modal-body">
-                 Product Detail
+                 Body
              </div>
              <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -549,6 +524,7 @@
 <script type='text/javascript' src='js/jqvalidate.js'></script>
 <script type='text/javascript' src='js/swiper.js'></script>
 <script type='text/javascript' src='js/detail.js'></script>
-<script type='text/javascript' src='js/hanoi.js'></script>
+<script type='text/javascript' src='js/finance.js'></script>
 <script type='text/javascript' src='js/cart.js'></script>
+
 </html>

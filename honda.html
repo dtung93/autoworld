@@ -13,6 +13,7 @@
 <link  rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' href='css/product.css'>
 <link rel='stylesheet' href='css/contact.css'>
 <link rel='stylesheet' href='css/menu.css'>
@@ -20,10 +21,11 @@
 <link rel='stylesheet' href='css/banner.css'>
 <link rel='stylesheet' href='css/body.css'>
 <body>
-    <div class="row" style="color: rgb(248, 239, 228);text-align: center;margin: auto;background-image: url('img/grass.jpg');height: 70px;background-repeat: no-repeat;background-size: cover;">
-    <marquee ><h1>Xuan Tung Auto World</h1></marquee>
-    
-    </div>
+    <div class="toast fixed-top">
+        <div class="toast-body bg-primary text-white" style="font-size: 20px;">
+          Product successfully added to cart!
+        </div>
+     </div>
     
     <div class="row">
     
@@ -64,12 +66,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html">Inventory</a>
+                    </li>
                 </ul>
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id='search'>
                     <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
                   </form>
             </div>
+            <li class="nav-item"><a href='cart.html'>
+                <i class="fa fa-shopping-cart"aria-hidden="true" id='cart'><span class='cart'>0</span></a></i>
+            </li>
         </nav>
         <h2 style="width: 100%;background-color: rgb(60, 111, 119);color: rgb(223, 221, 221);margin-left: 10px;">Best Selling Vehicles</h2>
         <div class="swiper-container hotsale">
@@ -543,4 +554,5 @@
 <script type='text/javascript' src='js/swiper.js'></script>
 <script type='text/javascript' src='js/detail.js'></script>
 <script type='text/javascript' src='js/honda.js'></script>
+<script type='text/javascript' src='js/cart.js'></script>
 </html>

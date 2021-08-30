@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{background-color: rgb(228,250,238); }
+    table img{width:300px;height:200px;}
+    #detail img{width:240px;height:180px;}
+</style>
+<body style="margin: 10px;">
+    <div class="container-fluid">
+        <input class="form-control mr-sm-2 fixed-top" type="search" placeholder="Search" aria-label="Search" id="search">
+    <h4>Add New Car</h4>
+<form id='frm1'>
+    <input type='text' name='name' id='name' placeholder="Model Name"><br>
+    <input type='text' name='brand' id='brand' placeholder="Brand"><br>
+    <input type='text' id='type' placeholder="Type" ><br>
+    <textarea id='avatar' name='avatar' placeholder="Image URL" style="width: 400px;"></textarea><br>
+   <input type='text' name='year' id='year' placeholder="Year Of Production"><br>
+    <input type='text' name='province' id='province' placeholder="Province"><br>
+    <input type='text' name='condition' id='condition' placeholder="Used or New"><br>
+    <input type='text' name='insurance' id='Insurance' placeholder="Insurance"><br>
+<input type='text' name='price' id='Price' placeholder="Price"><br>
+<button class='btn btn-primary' onclick="Add()">Create New Car</button>
+
+</button>
+</form>
+<table class="table table-bordered">
+<tr>
+    <th>ID</th>
+<th>Brand</th>
+<th>Model</th>
+<th>Type</th>
+<th>Image</th>
+<th>Year</th>
+<th>Province</th>
+<th>Condition</th>
+<th>Insurance</th>
+<th>Price</th>
+
+
+
+</tr>
+
+
+
+
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Product Information</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id='id' name='id'>
+                <h5>Name:</h5>
+              <input type='text' name='name' id='name' placeholder="Model Name" style="width: 100%;">
+              <h5>Brand:</h5>
+              <input type='text' name='brand' id='brand' placeholder="Brand"style="width: 100%;">
+              <h5>Type:</h5>
+                <input type='text' id='type' name='type' placeholder="Type" style="width: 100%;">
+                <h5>Img URL</h5>
+                <textarea id='avatar' name='avatar' placeholder="Image URL" style="width: 100%;"style="width: 100%;"></textarea>
+                <h5>Year:</h5>
+               <input type='text' name='year' id='year' placeholder="Year Of Production"style="width: 100%;">
+               <h5>Dealership</h5>
+                <input type='text' name='province' id='province' placeholder="Province"style="width: 100%;">
+                <h5>Condition</h5>
+                <input type='text' name='condition' id='condition' placeholder="Used or New"style="width: 100%;">
+                <h5>Insurance</h5>
+                <input type='text' name='insurance' id='insurance' placeholder="Insurance"style="width: 100%;">
+                <h5>Price</h5>
+            <input type='text' name='price' id='price' placeholder="Price"style="width: 100%;">
+            <img src='' id='image'>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="F2()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script>
+      const product='https://60d715b1307c300017a5f624.mockapi.io/'
+$(function(){
+
+$.ajax({
+url:product+'data',
+type:'get',
+success:function(s){
+console.log(s)
+k=''
+$.each(s,function(x1,x2){
+k=`<tr id="tr_${x2.id}"><td>${x2.id}</td><td>${x2.brand}</td><td>${x2.name}</td><td>${x2.type}</td><td><img src="${x2.avatar}"></td>
+ <td>${x2.year}</td><td>${x2.province}</td><td>${x2.condition}</td><td>${x2.insurance}</td><td>${x2.price}</td>
+ <td><button class='btn btn-info' type='button' onclick='F1(${x2.id})' data-toggle="modal" data-target="#detail">Edit</button>&nbsp&nbsp<button class='btn btn-danger' type='button' onclick='F3(${x2.id})'>Delete</button></td>
+ </tr>
+
+    
+    
+    
+    `
+$('table').append(k)
+
+
+})
+
+}
+
+
+
+})
+
+
+})
+//F1:Edit va F2:SAVE
+//F1 View
+function F1(id){
+$.ajax({
+url:product+'data'+'/'+id,
+type:'get',
+success:function(s){
+$('.modal-body #id').val(s.id)
+$('.modal-body #brand').val(s.brand)
+$('.modal-body #name').val(s.name)
+$('.modal-body #type').val(s.type)
+$('.modal-body #avatar').val(s.avatar)
+$('.modal-body #year').val(s.year)
+$('.modal-body #province').val(s.province)
+$('.modal-body #condition').val(s.condition)
+$('.modal-body #insurance').val(s.insurance)
+$('.modal-body #price').val(s.price)
+$('.modal-body #image').prop('src',s.avatar)
+}
+,error: function(s){console.log(s)}
+
+})
+
+
+
+
+}
+//F2 edit/save
+function F2(){
+let id=$('.modal-body #id').val()
+$.ajax({
+url:product+'data'+'/'+id,
+type:'PUT',
+dataType:'json',
+data:{
+  brand:$('.modal-body #brand').val(),
+name:$('.modal-body #name').val(),
+type:$('.modal-body #type').val(),
+avatar:$('.modal-body #avatar').val(),
+year:$('.modal-body #year').val(),
+province:$('.modal-body #province').val(),
+condition:$('.modal-body #condition').val(),
+insurance:$('.modal-body #insurance').val(),
+price:$('.modal-body #price').val()
+},success:function(s){
+$('.modal-body #brand').val('')
+$('.modal-body #name').val('')
+$('.modal-body #type').val('')
+$('.modal-body #avatar').val('')
+$('.modal-body #year').val('')
+$('.modal-body #province').val('')
+$('.modal-body #condition').val('')
+$('.modal-body #insurance').val('')
+$('modal-body #price').val('')
+alert('Item'+' '+s.id+' '+'updated')
+$('#detail').modal('hide')
+
+
+
+},error:function(s){console.log(s)}
+
+
+
+})
+
+
+}
+//F3:DELETE
+function F3(id){
+ $.ajax({
+url:product+'data'+'/'+id,
+type:'delete',
+dataType:'json',
+success:function(s){
+    alert('Item'+' '+id+' '+'is'+' '+'removed')
+$('#tr_'+id).remove()
+
+}
+    })}
+//Create new car   
+function Add(){
+$.ajax({
+url:product+'data',
+type:'post',
+dataType:'json',
+data:$('#frm1').serializeArray(),
+success:function(){alert('Successfully added!')
+
+}
+
+
+
+})
+
+
+}    
+//Tim Kiem
+$('#search').keyup( function(){
+    let value=$('#search').val().toLowerCase();
+    //alert(value);
+    console.log($('table>tr').length);
+    $('table tr').filter(function(){
+        
+        let result = $(this).text().toLowerCase().indexOf(value)>-1;
+        console.log('result',result);
+        $(this).toggle(result);
+    })
+});
+
+
+
+</script>
+</html>

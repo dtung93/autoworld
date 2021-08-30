@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you for your order</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">Thank you for your order </h1>
+        <p class="lead">Your order will be processed and delivered to you in one to three business days</p>
+       
+        <p>Like it so much? Browse for more</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="product.html" role="button">Products</a>
+        </p>
+    </div>
+</body>
+<script>
+    $(function(){
+        localStorage.clear('cart')
+    })
+</script>
+</html>

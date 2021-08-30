@@ -1,0 +1,48 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>   
+<link  rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("user_V9KiezCH0jF9A3TE8HU1T");
+})();
+</script>
+<style>
+    img{width: 170px;height:100px}
+    .buttons{float: right;}
+    .bienmat{display: none;}
+    .checkout{margin: 10px; padding: 10px;}
+#buy input,textarea{width: 30%;}
+#sl,#gt{border:none;border-width: 0px;outline: 0;font-weight: bold;}
+#sl,#gt:focus{outline:none!important;}
+</style>
+
+<body>
+<div id="products">
+</div>
+<div class="checkout">
+<form id='buy'>
+    <input type='hidden' id='order' name='order' value=""> 
+    <input type='hidden' id='nm' name='item_qty' value=''>
+    <input type='hidden' id='qt' name='item_price'value="">      
+   <input type='text' id='to_name' name='to_name' placeholder="Enter your name" required ><br>
+   <input type='text' id='to_address' name='to_address' placeholder="Enter your address" required ><br>
+   <input type='email' id='to_email' name='to_email' placeholder="Enter your email" required><br>
+   <input type='text'id='phone' name='to_phone' placeholder="Enter your phone number" required><br>
+   <input type='date' name='date' id='datePicker'><br>
+   <textarea name='note'> Note</textarea><br><br>
+   <button class='btn btn-primary btn-lg' type='submit' value='submit'>Checkout</button>
+   <button class='btn btn-outline-danger btn-lg' onclick="Empty();Empty1()">Empty Cart</button>
+       </form>
+<br>
+
+</div>
+</body>
+<script type='text/javascript' src='js/cart.js'></script>
+<script type='text/javascript' src='js/email.js'></script>
+</html>
