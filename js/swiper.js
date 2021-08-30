@@ -18,10 +18,7 @@ var swiper = new Swiper(".catalogue", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }, breakpoints: {
+    breakpoints: {
       640: {
         slidesPerView: 2,
         spaceBetween: 20,
@@ -45,10 +42,7 @@ var swiper = new Swiper(".catalogue", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }, breakpoints: {
+    breakpoints: {
       576:{
         slidesPerView:1,
         spacebetween:10,
@@ -66,3 +60,15 @@ var swiper = new Swiper(".catalogue", {
         spaceBetween: 50,
       },
   }});
+// HAM TIM KIEM
+  $('#search').keyup( function(){
+    let value=$('#search').val().toLowerCase();
+    //alert(value);
+    console.log($('.products #cart').length);
+    $('.products>div').filter(function(){
+        
+        let result = $(this).text().toLowerCase().indexOf(value)>-1;
+        console.log('result',result);
+        $(this).toggle(result);
+    })
+});
