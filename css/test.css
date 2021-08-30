@@ -1,0 +1,7 @@
+#map{
+    width:100%;
+    height:300px
+}
+
+body,html{margin: 0;width: 100%;background-image: url('../img/600911.jpg');height: 100%;background-repeat: no-repeat;background-position: center;background-size: cover;overflow: hidden;}
+.jumbotron{background-color: transparent;color: white;font-weight: lighter;}

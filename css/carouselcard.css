@@ -1,9 +1,9 @@
 .carousel-item img{width: 100%;height: 290px;margin-left:0}
-.card-horizontal img{width: 320px;height: 240px;}
+.card-horizontal img{width: 30rem;height: 20rem;}
 .card-horizontal{display: flex;flex: 1 1 auto;color: black;}
-.swiper-slide img{width: 100%;height: 250px;}
-.hotsale{margin:15px}
-.news img{width: 200px;height:190px}
+.swiper-slide img{width: 100%;height: 15rem;}
+.hotsale{margin:10px}
+.news img{width: 10rem;height:100%}
 ul#brands li img{width: 7rem;height: 4rem;size: 100%;}
 .card-header{background-color:rgb(77, 144, 155);}
 .card-body{background-color: rgb(228,250,238);}
