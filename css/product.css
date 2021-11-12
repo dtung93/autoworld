@@ -5,3 +5,5 @@
 #cart{font-size: 50px;color:rgb(224, 79, 68);}
 span.cart{color:rgb(224, 130, 87)}
 .checked{color: orange;}
+i#productcart,i#productcompare{font-size:28px;float: right;color: rgb(224, 79, 68);}
+
